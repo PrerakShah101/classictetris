@@ -6,13 +6,25 @@
         <link rel = "stylesheet" href = "style.css"></link>
     </head>
     <body>
-        <img src="tetris.jpg" style="align-items: center;">
+    <div class="header">
+        <img src="tetris.png" id = "logo">
         <h2>Score: <span id = "scoreCount">0</span></h2>
+    </div>
+        
+    <div class="center-wrapper">
         <button id = "thebutton">Start/Pause</button>
+        <button id = "resetBtn">Reset</button>
+    </div>
         <div id="bigdiv">
             <div id = "gridlay"></div>
             <div id="nextUp"></div>
         </div>
+    <footer>
+        <p>
+            <a href="https://github.com/PrerakShah101/classictetris.git" target="_blank">🔗 View Source on GitHub</a> |
+            <a href="https://www.wikihow.com/Play-Tetris" target="_blank">🎮 How to Play Tetris</a>
+        </p>
+    </footer>       
 
         <script src = "grid.js" charset = "utf-8"></script>
     </body>
