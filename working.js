@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '#FFD500', // Yellow
         '#FF971C', // Orange
         '#FF3213'  // Red
-      ]
+        ]
     const lTetro = [
         [1, width+1, width*2+1, 2],
         [width, width+1, width+2, width*2+2],
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         [width+1, width+2,width*2,width*2+1],
         [0,width,width+1,width*2+1],
         [width+1, width+2,width*2,width*2+1]
-      ]
+        ]
 
-      const tTetro = [
+        const tTetro = [
         [1,width,width+1,width+2],
         [1,width+1,width+2,width*2+1],
         [width,width+1,width+2,width*2+1],
@@ -167,19 +167,19 @@ function moveRotate() {
 //tick = setInterval(moveDown, 1000)
 //draw()
 function control(e) {
-    if (e.keyCode === 65)
+    if (e.keyCode === 65 || e.keyCode === 37)
     {
         moveLeft()
     }
-    if (e.keyCode === 68)
+    if (e.keyCode === 68 || e.keyCode === 39)
     {
         moveRight()
     }
-    if (e.keyCode === 87)
+    if (e.keyCode === 87 || e.keyCode === 38)
     {
         moveRotate()
     }
-    if (e.keyCode === 83)
+    if (e.keyCode === 83 || e.keyCode === 40)
     {
         moveDown()
     }
@@ -201,6 +201,12 @@ btn.addEventListener('click', () => {
 
     }
 })
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+    location.reload();
+});
+
+
 function addScore() {
     for (let i = 0; i < 199; i += width) {
         const row = [i, i+1, i+2, i+3, i+4, i+5, i+6, i+7, i+8, i+9]
