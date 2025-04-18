@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let nextRandom = 0
     let tick
     const colors = [
-        '#0341AE', // Blue
-        '#72CB3B', // Green
-        '#FFD500', // Yellow
-        '#FF971C', // Orange
-        '#FF3213'  // Red
+        '#0341AE', 
+        '#72CB3B', 
+        '#FFD500', 
+        '#FF971C', 
+        '#FF3213'  
         ]
     const lTetro = [
         [1, width+1, width*2+1, 2],
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
 const tetros = [lTetro, zTetro, tTetro, oTetro, iTetro]
 
-// Define next up display area
+
 const displaySquares = document.querySelectorAll('#nextUp div')
 const displayWidth = 4
 const displayIndex = 0
@@ -74,7 +74,7 @@ function displayShape() {
     })
 }
 
-// Set up tetrominoes
+
 nextRandom = Math.floor(Math.random() * tetros.length)
 //displayShape()
 
